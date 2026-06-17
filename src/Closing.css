@@ -1,0 +1,43 @@
+.closing {
+  background: var(--ink);
+  text-align: center;
+  padding: 70px 24px 60px;
+}
+
+.closing-seal {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #c23a36, #7c1216 75%);
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 6px 14px rgba(0,0,0,0.5),
+    inset 0 -3px 6px rgba(0,0,0,0.35),
+    inset 0 2px 5px rgba(255,255,255,0.15);
+}
+
+.closing-seal span {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.closing-line {
+  font-size: 1.2rem;
+  color: var(--blush);
+  margin: 0 0 8px;
+}
+
+.closing-sign {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blush);
+  opacity: 0.55;
+  margin: 0;
+}

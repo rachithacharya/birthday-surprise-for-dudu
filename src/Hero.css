@@ -1,0 +1,132 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 24px 100px;
+  background:
+    radial-gradient(ellipse 90% 60% at 50% 0%, var(--cherry-ember) 0%, transparent 65%),
+    linear-gradient(180deg, var(--cherry-deep) 0%, var(--cherry-matte) 55%, var(--ink) 100%);
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(201, 160, 79, 0.12), transparent 70%);
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.hero-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--blush);
+  opacity: 0.7;
+  margin: 0 0 22px;
+  animation: fade-up 0.9s ease both;
+}
+
+.hero-headline {
+  font-size: clamp(2.8rem, 8vw, 5.2rem);
+  line-height: 1.05;
+  color: var(--cream);
+  font-weight: 700;
+  animation: fade-up 0.9s 0.1s ease both;
+}
+
+.hero-headline .script {
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.hero-names {
+  margin: 28px 0 0;
+  font-size: clamp(1.1rem, 2.6vw, 1.5rem);
+  letter-spacing: 0.04em;
+  color: var(--blush);
+  font-weight: 500;
+  animation: fade-up 0.9s 0.2s ease both;
+}
+
+.ampersand {
+  color: var(--gold);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  padding: 0 6px;
+}
+
+.hero-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 36px 0 30px;
+  animation: fade-up 0.9s 0.3s ease both;
+}
+
+.hero-divider span:not(.hero-divider-dot) {
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.hero-divider-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.hero-note {
+  max-width: 480px;
+  font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+  color: var(--cream);
+  opacity: 0.88;
+  line-height: 1.5;
+  animation: fade-up 0.9s 0.4s ease both;
+}
+
+.hero-scroll {
+  position: absolute;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blush);
+  opacity: 0.7;
+  text-decoration: none;
+  animation: fade-up 0.9s 0.6s ease both;
+}
+
+.hero-scroll-arrow {
+  display: inline-block;
+  animation: bob 2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
